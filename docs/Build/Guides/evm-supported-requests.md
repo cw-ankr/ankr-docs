@@ -3,7 +3,42 @@ title: Supported JSON RPC Methods
 id: json-methods
 ---
 
-For EVM-compatible chains, Ankr supports the following methods:
+## EVM-compatible chains
+
+:::caution
+## Unsupported Ankr Protocol RPC Calls:
+
+Methods that require a specific node or relate to mining are unavailable.
+
+**eth_getFilterChanges** 
+
+**eth_newFilter** 
+
+**debug_traceBlock**
+
+**debug_traceBlockByNumber**
+
+**debug_traceBlockByHash**
+
+**eth_protocolVersion**
+
+**eth_submitHashrate** 
+
+**eth_submitWork**
+
+**eth_syncing**
+
+## Unsupported API Calls
+
+**eth_protocolVersion**
+
+**eth_submitHashrate** 
+
+**eth_submitWork**
+
+**eth_syncing**
+
+:::
 
 ### Websockets
 
@@ -945,46 +980,6 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sendRawTransaction","params"
 }
 ```
 
-## eth\_syncing
-
-Returns an object with data about the sync status or `false`.
-
-**Parameters**
-
-none
-
-**Returns**
-
-`Object|Boolean`, An object with sync status data or `FALSE`, when not syncing:
-
-* `startingBlock`: `QUANTITY` - The block at which the import started (will only be reset, after the sync reached his head)
-* `currentBlock`: `QUANTITY` - The current block, same as eth\_blockNumber
-* `highestBlock`: `QUANTITY` - The estimated highest block
-
-**Example**
-
-```javascript
-// Request
-curl -X POST --data '{"jsonrpc":"2.0","method":"eth_syncing","params":[],"id":1}'
-
-// Result
-{
-  "id":1,
-  "jsonrpc": "2.0",
-  "result": {
-    startingBlock: '0x384',
-    currentBlock: '0x386',
-    highestBlock: '0x454'
-  }
-}
-// Or when not syncing
-{
-  "id":1,
-  "jsonrpc": "2.0",
-  "result": false
-}
-```
-
 ## eth\_getUncleByBlockHashAndIndex
 
 Returns information about an uncle of a block by hash and uncle index position.
@@ -1278,3 +1273,26 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"net_listening","params":[],"id":
   "result":true
 }
 ```
+
+## txpool_content
+
+Can be queried to list all pending transactions for the next block(s) and those scheduled for future execution. 
+
+**Example**
+
+```curl
+curl https://rpc.ankr.com/eth \
+-X POST \
+-H "Content-Type: application/json" \
+-d '{"jsonrpc":"2.0","method":"txpool_content","id":0}'
+```
+
+
+
+
+## txpool_inspect
+
+
+
+## txpool_status
+
