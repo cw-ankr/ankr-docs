@@ -48,7 +48,7 @@
           title: "Docs",
           logo: {
             alt: "Ankr Logo",
-            src: "/docs/img/ankr-logo.svg",
+            src: "img/ankr-logo.svg",
           },
           items: [
             {
