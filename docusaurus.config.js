@@ -1,5 +1,3 @@
-// With JSDoc @type annotations, IDEs can provide config autocompletion
-/** @type {import('@docusaurus/types').DocusaurusConfig} */
 (
   module.exports = {
     title: "Welcome to Ankr Docs",
@@ -25,13 +23,11 @@
     presets: [
       [
         "@docusaurus/preset-classic",
-        /** @type {import('@docusaurus/preset-classic').Options} */
         ({
           docs: {
             sidebarPath: require.resolve("./sidebars.js"),
             // Please change this to your repo.
-            editUrl: "https://github.com/ankr-network/ankr-docs",
-            routeBasePath: '/',
+            editUrl: "https://www.ankr.com/",
           },
           theme: {
             customCss: require.resolve("./static/css/custom.css"),
@@ -40,7 +36,6 @@
       ],
     ],
     themeConfig:
-      /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
       {
         colorMode: {
           disableSwitch: true,
