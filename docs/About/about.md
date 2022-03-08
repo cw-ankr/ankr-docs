@@ -1,6 +1,7 @@
 ---
 Title: About Ankr
 id: about-ankr
+slug: about-ankr
 ---
 
 # About Ankr
