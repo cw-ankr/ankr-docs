@@ -1,5 +1,5 @@
 ---
-title: 〰 Add your own endpoints
+title: • Add your own endpoints
 id: add-endpoints
 ---
 

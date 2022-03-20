@@ -77,20 +77,24 @@
                   label: "Get Started",
                 },
                 {
-                  to: "category/concepts",
-                  label: "Concepts",
+                  to: "category/v2-Products",
+                  label: "v2 Products",
                 },
                 {
-                  to: "category/chains-v2",
-                  label: "Chains",
+                  to: "category/v2-Chains",
+                  label: "v2 Chains",
+                },
+                {
+                  to: "category/v1-Products",
+                  label: "v1 Products",
+                },
+                {
+                  to: "category/v1-Chains",
+                  label: "v1 Chains",
                 },
                 {
                   to: "category/guides",
                   label: "Guides",
-                },
-                {
-                  to: "Build/Support/get-support",
-                  label: "Support",
                 },
               ],
             },

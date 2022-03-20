@@ -31,7 +31,7 @@ module.exports = {
       },
       {
           type: 'category',
-          label: 'V2 Product Suite',
+          label: 'v2 Products',
           link: {
             type: 'generated-index',
           },
@@ -47,7 +47,7 @@ module.exports = {
         },
         {
           type: 'category',
-          label: 'Chains V2',
+          label: 'v2 Chains',
           link: {
             type: 'generated-index',
           },
@@ -67,7 +67,7 @@ module.exports = {
         },
       {
         type: 'category',
-        label: 'V1 Products',
+        label: 'v1 Products',
         link: {
           type: 'generated-index',
         },
@@ -80,7 +80,7 @@ module.exports = {
 
       {
         type: 'category',
-        label: '⛓ Chains V1',
+        label: 'v1 Chains',
         link: {
           type: 'generated-index',
         },
