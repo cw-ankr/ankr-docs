@@ -37,56 +37,52 @@ To deploy:
 
 Currently, we're using the following Gitflow:
 
-1. Create a feature branch from the `develop` folder.
+1. Create a feature branch from the `stage` branch. Use the branch naming format described farther in this doc.
 2. Work on the documentation for the feature.
 3. When done, test your documentation deploying it to `STAGE`.
-4. When tested, create a pull request to the `develop` branch and add colleagues as reviews, at your discretion.
-5. When merged, test the `develop` branch deploying it to `STAGE`.
+4. When tested, create a pull request to the `stage` branch and add colleagues as reviews, at your discretion. Use the pull request naming format described farther in this doc.
+5. When merged, test the `stage` branch deploying it to `STAGE`.
 6. When ready, create a pull request to the `main` branch.
 7. When merged, test the `main` branch deploying it to `STAGE`.
 8. When tested, deploy the `main` branch to `PROD`.
+
+### Branch naming format 
+
+The common pattern for a branch name `<type>/<JIRA-TASK-NUMBER-description>`.
+
+Types: 
+
+* `feature` — tasks and stories
+
+* `bugfix` — bugs such as typos
+
+* `hotfix` — on-the-spot updates
+
+Naming examples:
+
+* `feature/FOOBAR-1-create-ankr-earn-docs`
+
+* `bugfix/FOOBAR-2-fix-typos`
+
+* `hotfix/FOOBAR-3-update-sc-addresses-for-earn`
+
+### Pull request naming format
+
+The common pattern for a pull request title or commit message is `<type>[optional scope]: <TASK-000 description>`.
+
+Naming examples:
+
+* `feat: FOOBAR-555 add docs for Ankr Protocol`
+
+* `fix(Fantom staking): FOOBAR-666 fix typos`
+
+* `chore: FOOBAR-777 update smart contract addresses for Ankr Earn`
 
 ## How to add a new page
 
 1. Create a new markdown file in a related folder that lives under the `docs` folder, e.g. `staking.md` should live somewhere in `docs/Earn`, as it's related to ANKR Earn.
 2. At the beginning of the file, insert ***yaml front matter*** with the page **title** and a unique **id** (emphasis on the word **unique**). For example:
 
-```
----
-title: About StakeFi
-id: about-stakefi
----
-```
-3. Add content using the standard Markdown flavor. Adding admonitions, follow this syntax:
+## Search
 
-```
-:::note
-
-Some **content** with _markdown_ `syntax`. Check [this `api`](#).
-
-:::
-
-:::tip
-
-Some **content** with _markdown_ `syntax`. Check [this `api`](#).
-
-:::
-
-:::info
-
-Some **content** with _markdown_ `syntax`. Check [this `api`](#).
-
-:::
-
-:::caution
-
-Some **content** with _markdown_ `syntax`. Check [this `api`](#).
-
-:::
-
-:::danger
-
-Some **content** with _markdown_ `syntax`. Check [this `api`](#).
-
-:::
-```
+[The job](https://github.com/Ankr-network/ankr-docs/actions/workflows/scrape.yml) must be triggered manually when [https://www.ankr.com/docs/](https://www.ankr.com/docs/) updated.

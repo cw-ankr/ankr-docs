@@ -35,8 +35,8 @@ const LINKS = [
         link: "https://www.ankr.com/build/nodes/",
       },
       {
-        name: "Ankr Stakefi",
-        link: "https://stakefi.ankr.com/liquid-staking",
+        name: "Ankr Earn",
+        link: "https://www.ankr.com/earn/",
       },
       {
         name: "Ankr Protocol",
@@ -47,6 +47,10 @@ const LINKS = [
   {
     name: "About us",
     list: [
+      {
+        name: "Our Vision",
+        link: "https://www.ankr.com/docs/learn/reference/ankr-vision",
+      },
       {
         name: "Our Story",
         link: "https://www.ankr.com/about/our-purpose/",
@@ -94,6 +98,7 @@ const LINKS = [
 
 export default function Footer() {
   return (
+    <div className={styles.wrapper}>
     <div className={styles.container}>
       <div className={styles.info}>
         <div className={styles.partners}>
@@ -139,6 +144,7 @@ export default function Footer() {
           </Link>
         </div>
       </div>
+    </div>
     </div>
   );
 }

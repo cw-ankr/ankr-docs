@@ -4,17 +4,17 @@ import styles from "./Features.module.css";
 import ArrowIcon from '../../../static/img/feature/arrow.svg';
 
 const FeatureList = [
-  { 
+  {
     title: "Connect ＆ Build",
     icon: require("../../../static/img/feature/build-icon.png").default,
     list: [
 
       'Access Premium APIs and RPC endpoints with WebSockets',
       'Seamless interaction with 40+ supported blockchains',
-      'Expansive library of docs, tutorials, and learning resources',
+      'Build a fast and secure blockchain with BSC Application Sidechain (BAS)',
       'Suitable for web3 developers and enthusiasts of all skill levels',
     ],
-    link: 'https://www.ankr.com/docs/Build/Concepts/build-concepts',
+    link: 'https://www.ankr.com/docs/build-blockchain/overview',
 
   },
   {
@@ -28,7 +28,7 @@ const FeatureList = [
     ],
 
 
-    link: 'https://www.ankr.com/docs/Earn/earn-introduction',
+    link: 'https://www.ankr.com/docs/earn/overview',
 
   },
   {
@@ -39,19 +39,19 @@ const FeatureList = [
       'Utilize $ANKR token utility across our product suite',
       'Participate in on-chain governance by holding $ANKR',
       'Pay for services on the Ankr platform with $ANKR',
-    ],   
-    link: 'https://www.ankr.com/docs/category/%EF%B8%8F-governance',
+    ],
+    link: 'https://www.ankr.com/docs/learn/tokens-governance/ankr-tokens',
   },
   {
-    title: "Ankr Community",
-    icon: require("../../../static/img/feature/community-icon.png").default,
+    title: "Tutorials",
+    icon: require("../../../static/img/feature/tutorials-icon.png").default,
     list: [
-      'Connect with a global community of Ankr enthusiasts',
-      'Get the latest updates on all things Ankr',
-      'Support the growth and development of web3 infrastructure',
-      'Discover opportunities for grants, partnerships, and more', 
+      'Read practical tutorials to build projects',
+      'Build DeFi and Web3 projects, step by step',
+      'Share your knowledge and submit your own tutorials',
+      'Discover opportunities for grants, partnerships, and more',
     ],
-    link: 'https://www.ankr.com/docs/Community/channels',
+    link: 'https://www.ankr.com/docs/learn/tutorials/create-voting-system/movie-voting-web3',
   }
 ];
 
@@ -73,13 +73,15 @@ function Feature({ icon, title, list, description, link }) {
   );
 }
 
-export default function Features() { 
+export default function Features() {
   return (
     <section className={styles.features}>
       <div className={styles.container}>
+        <div className={styles.wrapper}>
         {FeatureList.map((props, idx) => (
           <Feature key={idx} {...props} />
         ))}
+        </div>
       </div>
     </section>
   );
